@@ -52,6 +52,10 @@ void display_char() {
 }
 
 
+/* Note : operateur ternaire
+ * (cond)?val1:val2 est une expression ternaire qui a pour valeur
+ * val1 si (cond) est vraie, val2 sinon */
+
 int main(int argc, char *argv[]) {
   if (argc != 2)
     usage("usage: ./ex2 chaine");

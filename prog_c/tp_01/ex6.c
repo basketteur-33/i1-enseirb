@@ -40,7 +40,6 @@ int fibo_iter_bis(int n) {
 }
   
 
-
 int main(int argc, char *argv[]) {
   for (int i = 0 ; i < 10 ; i++)
     printf("fibo_rec(%d) : %d\n", i, fibo_rec(i));

@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+
 int pgcd_rec(int a, int b) {
   if (b == 0)
     return a;
@@ -34,18 +35,10 @@ void affiche_pgcd(int a, int b) {
 }
   
  
-int main(int argc, char *argv[]) {
-  /* Usage */
-  if (argc != 3) {
-    printf("Usage : ./ex1 a b");
-    exit(1);
-  }
-
-  /* Tests */
-  int a = atoi(argv[1]);
-  int b = atoi(argv[2]);
-  
-  affiche_pgcd(a,b);
+int main(int argc, char *argv[]) { 
+  affiche_pgcd(10, 5);
+  affiche_pgcd(24, 36);
+  affiche_pgcd(95, 57);
 
   return EXIT_SUCCESS;
 }

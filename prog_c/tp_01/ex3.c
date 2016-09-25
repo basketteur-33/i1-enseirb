@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+
 void display_array(int t[], int n) {
   int i = 0;
 
@@ -28,6 +29,12 @@ int sum_array(int t[], int n) {
 }
 
 
+/* Note
+ * i++ revient a faire i = i + 1 apres l'execution de la ligne
+ * ++i revient a faire i = i + 1 avant l'execution de la ligne
+ */
+
+
 /* On suppose que t1 et t2 sont de même longueur n */
 int scalar_produt_array(int t1[], int t2[], int n) {
   int s = 0;
@@ -40,6 +47,7 @@ int scalar_produt_array(int t1[], int t2[], int n) {
 
   return s;
 }
+
 
 /* On passe en parametre le tableau vide res qui servira a stocker le resultat */
 /* On suppose que res, t1 et t2 sont de même longueur n */

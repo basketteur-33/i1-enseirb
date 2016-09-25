@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+
 void display_array(int t[], int n) {
   int i = 0;
 
@@ -19,11 +20,9 @@ void display_array(int t[], int n) {
 int is_sort(int t[], int n) {
   int i = 1;
 
-  while (i < n) {
-    if (t[i-1] > t[i])
+  while (i < n)
+    if (t[i-1] > t[i++])
       return 0;
-    i++;
-  }
 
   return 1;
 }
@@ -32,11 +31,9 @@ int is_sort(int t[], int n) {
 int is_inside(int t[], int n, int x) {
   int i = 1;
 
-  while (i < n) {
-    if (t[i] == x)
+  while (i < n)
+    if (t[i++] == x)
       return 1;
-    i++;
-  }
 
   return 0;
 }
@@ -64,11 +61,6 @@ int rech_dicho(int t[], int n, int x) {
 }
 
 
-int rech_dicho_rec(int t[], int n, int x) {
-  return rech_dicho_rec_bis(t, n, x, 0, n);
-}
-
-
 int rech_dicho_rec_bis(int t[], int n, int x, int debut, int fin) {
   if (debut > fin)
     return 0;
@@ -84,11 +76,17 @@ int rech_dicho_rec_bis(int t[], int n, int x, int debut, int fin) {
 }
 
 
+int rech_dicho_rec(int t[], int n, int x) {
+  return rech_dicho_rec_bis(t, n, x, 0, n);
+}
+
+
 int main(int argc, char *argv[]) {
   int n = 5; 
 
   int t1[5] = { 1, 4, 43, 65, 94 };
   int t2[5] = { 1, 4, 42, 65, 94 };
+  int t3[5] = { 1, 4, 43, 94, 65 };
 
   printf("t1 : ");
   display_array(t1, n);
@@ -96,8 +94,12 @@ int main(int argc, char *argv[]) {
   printf("t2 : ");
   display_array(t2, n);
 
+  printf("t3 : ");
+  display_array(t3, n);
+
   printf("is_sort(t1, n) : %d\n", is_sort(t1, n));
   printf("is_sort(t2, n) : %d\n", is_sort(t2, n));
+  printf("is_sort(t3, n) : %d\n", is_sort(t3, n));
 
   printf("is_inside(t1, n, 42) : %d\n", is_inside(t1, n, 42));
   printf("is_inside(t2, n, 42) : %d\n", is_inside(t2, n, 42));
