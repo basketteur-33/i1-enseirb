@@ -26,8 +26,8 @@ int est_palindrome(char *str) {
 
 
 int my_isalpha(char c) {  
-  return (c >= 'A' && c <= 'Z' ||
-	  c >= 'a' && c <= 'z');
+  return ((c >= 'A' && c <= 'Z') ||
+	  (c >= 'a' && c <= 'z'));
 }
 
 

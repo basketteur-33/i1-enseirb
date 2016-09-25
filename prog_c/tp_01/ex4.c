@@ -20,9 +20,11 @@ void display_array(int t[], int n) {
 int is_sort(int t[], int n) {
   int i = 1;
 
-  while (i < n)
-    if (t[i-1] > t[i++])
+  while (i < n) {
+    if (t[i-1] > t[i])
       return 0;
+    i++;
+  }
 
   return 1;
 }
