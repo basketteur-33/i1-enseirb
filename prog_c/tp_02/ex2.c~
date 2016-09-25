@@ -1,0 +1,33 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+
+void usage(char *s) {
+  perror(s);
+  exit(1);
+}
+
+
+int est_palindrome(char *str) {
+  int i = 0;
+  int j = strlen(str);
+
+  while (i < j) {
+    if (str[i] != str[j])
+      return 0;
+    i++;
+    j--;
+  }
+
+  return 1;
+}
+
+
+int main(int argc, char *argv[]) {
+  if (argc != 2)
+    usage("usage: ./ex2 chaine");
+
+  
+  return EXIT_SUCCESS;
+}
