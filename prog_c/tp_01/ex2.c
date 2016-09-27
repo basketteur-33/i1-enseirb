@@ -1,8 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define ARRAY_SIZE 10
-
 void display_array(int t[], int n) {
   int i = 0;
 
@@ -29,9 +27,11 @@ void fill_array_even(int t[], int n) {
  
 
 int main(int argc, char *argv[]) {
-  int t[ARRAY_SIZE];
-  fill_array_even(t, ARRAY_SIZE);
-  display_array(t, ARRAY_SIZE);
+  int size = 10;
+
+  int t[size];
+  fill_array_even(t, size);
+  display_array(t, size);
 
   return EXIT_SUCCESS;
 }

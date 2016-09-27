@@ -19,6 +19,7 @@ int my_strlen(char *str) {
 }
 
 
+/* Pas le vrai comportement */
 int my_strcmp(char *str1, char *str2) {
   return my_strlen(str1) - my_strlen(str2);
 }

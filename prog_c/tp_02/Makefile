@@ -1,3 +1,7 @@
-CFLAGS=-std=c99
+CFLAGS=-std=c99 -Wall -Werror
+OUTPUTS=ex1 ex2 ex3 ex4 ex5
 
-all: ex1 ex2 ex3 ex5
+all: $(OUTPUTS)
+
+clean:
+	rm $(OUTPUTS)

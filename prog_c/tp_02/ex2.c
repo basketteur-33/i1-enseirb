@@ -26,8 +26,8 @@ int est_palindrome(char *str) {
 
 
 int my_isalpha(char c) {  
-  return (c >= 'A' && c <= 'Z' ||
-	  c >= 'a' && c <= 'z');
+  return ((c >= 'A' && c <= 'Z') ||
+	  (c >= 'a' && c <= 'z'));
 }
 
 
@@ -51,6 +51,10 @@ void display_char() {
     printf("%d : %c\n", i, i);
 }
 
+
+/* Note : operateur ternaire
+ * (cond)?val1:val2 est une expression ternaire qui a pour valeur
+ * val1 si (cond) est vraie, val2 sinon */
 
 int main(int argc, char *argv[]) {
   if (argc != 2)

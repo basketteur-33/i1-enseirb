@@ -20,7 +20,6 @@ void echange(char *str, int i, int j) {
 }
   
 
-
 void chaine_miroir(char *str) {
   int i = 0;
   int j = strlen(str) - 1;
@@ -52,7 +51,7 @@ int main(int argc, char *argv[]) {
   size_t n = strlen(argv[1]);
   char dest[n];
 
-  printf("chaine_miroir_bis(dest, %s)\n", argv[1]);
+  printf("chaine_miroir_bis(dest, %s) : fonction a effet de bord\n", argv[1]);
   chaine_miroir_bis(dest, argv[1]);  
   printf("argv[1] : %s\n", argv[1]);
   printf("dest : %s\n", dest);
