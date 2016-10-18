@@ -11,7 +11,7 @@ if [ $# -ne 0 ]
 then
     usage
 else
-    LINES=$(cat passwd | cut -f 1 -d ':' | grep -E ^.{8})
+    LINES=$(cat passwd | cut -f 1 -d ':' | grep -E ^.{9})
 
     for i in $LINES
     do
